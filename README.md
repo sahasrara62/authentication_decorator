@@ -91,7 +91,7 @@ User hit endpoint `/login`  with credentials 'username' and 'password', will get
 
 1. `/login`
    - method: POST
-   - params: {"username": "admin", "password": "password"}
+   - body : {"username": "admin", "password": "password"}
    - endpont example: ```http://127.0.0.1:5000/login```
    - response: *sucessful* -> `{"token": "token_string"}`
                *erorr* -> could not verify user
@@ -106,7 +106,7 @@ User hit endpoint `/login`  with credentials 'username' and 'password', will get
 3. `/users/signup`
 
    - method: POST
-   - params: {'username':'username', 'password':'password', 'permission': 'user'}
+   - request body : {'username':'username', 'password':'password', 'permission': 'user'}
    - headers:          {'x-access-token': <token_got_on_login>}
    
    a login admin can sign up the user 
