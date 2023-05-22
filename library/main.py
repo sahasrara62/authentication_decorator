@@ -107,7 +107,7 @@ def get_details(username):
 @token_required
 @permission_required(['admin'])
 def delete_users(username):
-    user=User.query.filter_by(id=username).first()
+    user=User.query.filter_by(username=username).first()
     if not user:
         return jsonify({'message': 'user does not exist'})
 
